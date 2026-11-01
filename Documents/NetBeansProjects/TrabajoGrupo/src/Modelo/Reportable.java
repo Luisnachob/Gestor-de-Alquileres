@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
-package Modelo;
+package modelo;
 
-/**
- *
- * @author luisi
- */
 public interface Reportable {
+    String generarReporte();
+    void imprimirReporte();
     
+    default String titulo() {
+        return "Reporte de Morosidad y Alquileres";
+    }
+    
+    
+    default void mostrarCabeceraEstandar() {
+        System.out.println("  " + titulo());  
+    }
 }
