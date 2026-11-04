@@ -8,8 +8,7 @@ public interface Reportable {
         return "Reporte de Morosidad y Alquileres";
     }
     
-    
     default void mostrarCabeceraEstandar() {
-        System.out.println("  " + titulo());  
+        System.out.println("  "+titulo());  
     }
 }
